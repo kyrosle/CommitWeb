@@ -3,6 +3,10 @@ interface CommitProp {
   labels: string[],
   commit: string
 }
+
+/**
+ * 评论条样式
+ */
 const Commit: React.FunctionComponent<CommitProp> = ({ labels, commit }) => {
   return (
     <tr>
@@ -29,6 +33,9 @@ const Commit: React.FunctionComponent<CommitProp> = ({ labels, commit }) => {
   )
 }
 
+/**
+ * 获取随即两个字符
+ */
 function generateRandomChars(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const randomChars = `${chars.charAt(Math.floor(Math.random() * chars.length))}${chars.charAt(Math.floor(Math.random() * chars.length))}`;
